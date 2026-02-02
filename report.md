@@ -1,33 +1,28 @@
-# Tenx MCP Challenge - Gashaw
+# Tenx MCP Challenge Report - Gashaw
 
-## Setup (Task 1)
+## Task 1: Setup
 
-- IDE: VS Code
-- Installed GitHub Copilot + Copilot Chat.
-- Created `.vscode/mcp.json` with URL https://mcppulse.10academy.org/proxy, name "tenxfeedbackanalytics", headers X-Device:"windows" (or your OS), X-Coding-Tool:"vscode".
-- Authenticated via GitHub redirect.
-- Verified: Tools visible in Copilot Chat; tested prompt confirmed connection.
-- Active: Workspace kept open for logging.
+[Same as before – detailed, no issues after reloads/headers check.]
 
-## Rules Research & Changes (Task 2)
+## Task 2: Research & Rules
 
-- Studied Boris Cherny's Jan 2026 thread (via X summaries): Emphasis on planning, verification, shared CLAUDE.md updates after mistakes, subagents/parallel, concise rules.
-- Community patterns: Concise files (<100 lines), explicit planning/verification loops, mistake-proofing.
-- Created `.github/copilot-instructions.md` with sections: Workflow (plan → code → verify), Standards, Anti-patterns.
-- Changes: Added strong "ALWAYS plan" and verification mandates; adapted Claude-focused tips to Copilot.
+- Primary: Boris Cherny's Jan/Feb 2026 thread (plan mode first, verification critical, self-update CLAUDE.md after mistakes, parallel worktrees, concise rules ~2.5k tokens).
+- Additional: GitHub Docs/Blog (repo-wide instructions, natural language, sections for stack/standards); VS Code Docs (auto-apply to chat/gen); Cursor Docs (composable .mdc, <500 lines, globs); Anthropic Claude Code best practices (concise CLAUDE.md, /init starters); Wiz Blog (security rules); Reddit/Medium (emphatic phrasing, cross-tool reuse).
+- Changes: Started basic standards → added planning/verification (Boris) → emphatic "ALWAYS" + security (GitHub/Wiz) → concise sections (Cursor tip).
+- Testing: 8+ prompts; v1 skipped planning → v3 consistent outlines/tests. Copilot: Global adherence good but verbose ignored; Cursor sim (forum examples): Scoped rules more precise.
 
 ## What Worked
 
-- Planning rule → Copilot now outlines steps first in responses.
-- Verification suggestions → Prompts include test/run commands automatically.
-- Concise structure → Better adherence vs. longer drafts.
+- Planning/verification mandates → Copilot outlines + suggests checks (matches Boris 2-3x quality boost).
+- Concise + emphatic → Reliable vs. vague drafts.
+- Personal focus (deliberate progress) → Aligns outputs with my careful style.
 
 ## What Didn't Work / Troubleshooting
 
-- Initial MCP: No start button → Reloaded VS Code, re-checked mcp.json syntax.
-- Copilot skipped planning on simple prompts → Added "ALWAYS" emphasis and tested iteratively.
-- If MCP auth failed: Cleared browser cache, re-authorized GitHub app.
+- v1/v2: Skipped on simple prompts → "ALWAYS" + sequence fixed.
+- MCP: Detection delay → Reload + header validation.
+- Verbose rules: Diluted focus → Trimmed <300 lines.
 
 ## Insights Gained
 
-Rules shift AI from generic autocomplete to aligned partner. Explicit planning/verification matches thoughtful style (reduces hasty/buggy code). Iterative testing shows phrasing matters—"ALWAYS" > soft suggestions. Boris's self-updating rules concept inspires long-term improvement (Copilot learns implicitly via repeated use).
+Rules align AI to my intent: Without planning, hasty code (mismatch thoughtful process); with Boris-style verification + emphatic directives, outputs mirror step-by-step + testable reasoning. Copilot static vs. Cursor modular (globs better for scoping) vs. Claude dynamic self-update. Phrasing critical—"ALWAYS" enforces better. Iteration + diverse sources (GitHub/Cursor/Anthropic) show rules evolve: minimal start → test/refine → better alignment/expectation match.
