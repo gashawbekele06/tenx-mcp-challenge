@@ -1,37 +1,34 @@
-# GitHub Copilot Instructions - Personalized Rules (Inspired by Boris Cherny's Claude Code Workflow)
+# GitHub Copilot Instructions - Gashaw's Personalized Workflow (vFinal)
 
-## Project Context
+## Personal & Project Context
 
-You assist in thoughtful, secure, maintainable coding. Assume modern practices and careful development over speed hacks.
+I prefer careful, deliberate development: correctness > speed; step-by-step reasoning; testable/security-first code. Assume modern practices (async, typing, clean architecture).
 
-## Workflow Rules (Core from Boris Cherny & Best Practices)
+## Core Workflow (Boris Cherny + GitHub/Cursor Best Practices)
 
-- ALWAYS start significant tasks with a clear PLAN: Outline steps, assumptions, risks, edge cases, and verification methods. Ask clarifying questions if ambiguous.
-- Implement iteratively in small, focused steps with explanations.
-- VERIFICATION MANDATORY: After code or changes, ALWAYS suggest/propose concrete checks: run tests (e.g., pytest/npm test), lint/format, start server, check logs/output/browser behavior. Do not assume correctness—blind work leads to errors.
-- If problems emerge, re-plan instead of forcing fixes.
-- Learn implicitly: Avoid repeating patterns from corrections (e.g., no hard-coded secrets, follow naming).
-- Keep responses concise and focused.
+- ALWAYS start complex/ambiguous tasks with PLAN: Outline steps, assumptions, edge cases, risks, verification strategy. Ask clarifying questions.
+- Implement small, iterative steps with explanations.
+- VERIFICATION REQUIRED: After changes, ALWAYS suggest concrete checks: run tests (pytest/npm test), lint/format, build/run server, check logs/browser/console. Blind execution causes errors (Boris: verification 2-3x quality).
+- Re-plan on issues; don't patch blindly.
+- Implicit learning: Avoid repeating corrected patterns (e.g., no secrets in code).
 
-## Coding Standards
+## Coding Standards (GitHub Docs + Community)
 
-- Follow DRY, SOLID, and clean code principles.
-- Use descriptive names; strict typing (e.g., TypeScript/Python hints).
-- Security first: No secrets/keys in code; use env vars or managers.
-- Error handling: Comprehensive with context logging.
-- Formatting: Consistent (assume black/prettier/eslint configured).
-- Avoid globals, eval, premature optimization, over-engineering.
+- DRY, SOLID, clean code.
+- Descriptive names; strict typing.
+- Security: No hard-coded secrets/keys (env vars only).
+- Comprehensive error handling + logging.
+- Avoid globals, eval, premature optimization.
 
 ## Anti-Patterns
 
-- No silent failures or hidden errors.
-- Prefer readable over clever/one-liner code.
-- No assumptions without confirmation.
+- Silent failures, unchecked assumptions.
+- Verbose complexity.
+- Skipping verification.
 
-## Commands / Tools (Adapt to Your Project)
+## Commands (Customize)
 
-- Test: [e.g., pytest, npm test]
-- Build/Run: [e.g., npm run build, npm start]
-- After edits: Suggest commit message + verification.
+- Test: pytest / npm test
+- Build/Run: npm run build / npm start
 
-Sequence for tasks: Plan → Code → Verification suggestions.
+Sequence: Plan → Code → Verification.
