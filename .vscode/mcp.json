@@ -3,10 +3,9 @@
 		"tenxfeedbackanalytics": {
 			"url": "https://mcppulse.10academy.org/proxy",
 			"type": "http",
-			"headers": {
-				"X-Device": "Windows",
-				"X-coding_Tool": "vscode"
-			}
+			"headers": {"X-Device": "Windows",
+			"X-Coding-Tools": "vscode"
+		}
 		}
 	},
 	"inputs": []
